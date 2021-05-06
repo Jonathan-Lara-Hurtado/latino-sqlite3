@@ -21,9 +21,9 @@ sudo ./instalar.sh
 
 # Funciones
 * Retorna un conector o nulo = conexion_bd(cadena);
-* Retorna un dicionario{estado,resultado} = ejecutar_consulta(cadena)
-* Retorna un logico = desconectar_bd(conector)
-* retoran una cadena con la version de sqlite3 = version()
+* Retorna un diccionario{estado,resultado} = ejecutar_consulta(cadena)
+* Retorna un lógico = desconectar_bd(conector)
+* Retorna una cadena con la versión de sqlite3 = version()
 
 # Como funciona
 ```
@@ -67,13 +67,13 @@ si (bd != nulo)
     fin
 
 sino
-    escribir ("Conexion fallida")
+    escribir ("Conexión fallida")
 fin
 ```
 # Observaciones
 
-* Todos los resultados de una consulta salen tipo cadena(Esto no deveria pero por el momento asi queda) Nota: Posible solucion a este problema es que haga una consulta de como esta compuesta la tabla(Pragma table_info) e ir comparando para saber el tipo de dato de estos.
-* Es necesario que declares una variable antes del sqlite.ejecutar_consulta() aunque esta no sea usada como se puede apreciar en el ejemplo.
+* Todos los resultados de una consulta salen tipo cadena(Esto no debe suceder pero por el momento así queda). Nota:La posible solución a este problema es que se haga una consulta de como esta compuesta la tabla (Pragma table_info) e ir comparando para saber el tipo de dato son estos.
+* Es necesario que declares una variable antes del sqlite.ejecutar_consulta() aunque esta no sea usada, como se puede apreciar en el ejemplo anterior.
 
 
-##### Cualquier aportacion o sugerencia es bienvenida.
+##### Cualquier aportación o sugerencia es bienvenida.

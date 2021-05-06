@@ -38,5 +38,5 @@ si (bd != nulo)
     fin
 
 sino
-    escribir ("Conexion fallida")
+    escribir ("Conexión fallida")
 fin
