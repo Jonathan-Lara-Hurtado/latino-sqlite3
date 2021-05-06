@@ -1,0 +1,4 @@
+Posibles lugares de instalacion del .so
+
+* /usr/lib
+* /usr/local/lib
