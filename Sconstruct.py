@@ -36,5 +36,5 @@ entorno.Append(LIBPATH=[ruta_librerias,ruta_sqlite_construccion])
 
 entorno.Append(LIBS = ['latino','sqlite'])
 
-
+#s
 entorno.SharedLibrary(target = "build/latino-sqlite", source = "src/latino-sqlite.c")
