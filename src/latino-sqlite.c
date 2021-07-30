@@ -20,6 +20,13 @@ THE SOFTWARE.
 
 #include <stdlib.h>
 
+// Necesario para Windows
+#ifdef _WIN32
+// Especifica que se generar� una libreria DLL
+#define LATINO_BUILD_AS_DLL
+#endif
+
+
 #define LATINO_LIB
 //se agrega la cabecera de sqlite3
 #include "sqlite3.h"
