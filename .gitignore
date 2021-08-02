@@ -30,3 +30,16 @@ build/CMakeFiles/latino-sqlite.dir/link.txt
 build/CMakeFiles/latino-sqlite.dir/progress.make
 build/CMakeFiles/latino-sqlite.dir/src/latino-sqlite.c.o
 Prueba.db
+build/latino_sqlite_x86/instalacion.txt
+build/latino_sqlite_x86/latino-sqlite.dll
+build/latino_sqlite_x86/latino-sqlite.exp
+build/latino_sqlite_x86/latino-sqlite.lib
+build/latino-sqlite.dll
+build/latino_sqlite_x86.zip
+build/latino-sqlite.exp
+build/latino-sqlite.lib
+ejemplos/.lat_historial
+sqlite/build/sqlite.lib
+src/latino-sqlite.obj
+sqlite/sqlite3.obj
+.sconsign.dblite

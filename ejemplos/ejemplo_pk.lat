@@ -1,0 +1,32 @@
+incluir("sqlite")
+
+#ejemplo de tablas https://www.sqlite.org/foreignkeys.html
+
+bd = sqlite.conexion_bd("Prueba.db")
+
+si (bd != nulo)
+    consultaTablaArtista = "create table artista(artistaId integer primary key,artistaNombre text)"
+    resultado = sqlite.ejecutar_consulta(bd,consultaTablaArtista)
+
+    #inserción 1
+    consulta = "insert into artista(artistaId,artistaNombre) values (1,'pedro')"
+    resultado = sqlite.ejecutar_consulta(bd,consulta)
+    escribir(resultado)
+
+    #inserción 2 fallida por repetir artistaId
+    consulta = "insert into artista(artistaId,artistaNombre) values (1,'pedro')"
+    resultado = sqlite.ejecutar_consulta(bd,consulta)
+    escribir(resultado)
+
+    #inserción 3
+    consulta = "insert into artista(artistaId,artistaNombre) values (2,'pedro')"
+    resultado = sqlite.ejecutar_consulta(bd,consulta)
+    escribir(resultado)
+    
+    si (sqlite.desconectar_bd(bd))
+        escribir ("Se cerro la base de datos correctamente")
+    fin
+
+sino
+    escribir ("Conexión fallida")
+fin

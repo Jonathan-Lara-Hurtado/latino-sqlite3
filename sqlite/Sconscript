@@ -1,0 +1,4 @@
+Import('entorno')
+
+
+entorno.StaticLibrary(target="build/sqlite",source="sqlite3.c")
