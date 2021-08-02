@@ -7,7 +7,7 @@ ruta_Absoluta = GetLaunchDir()
 
 ruta_include_latino = "C:\\Program Files\\Latino\\include"
 ruta_librerias = "C:\\Program Files\\Latino\\bin"
-ruta_regex = "C:\\Users\\Asus\\git\\latino-Core\\src\\latino-regex\\src"
+ruta_regex = os.path.join( ruta_Absoluta,"latino-regex/src/")
 ruta_sqlite = os.path.join(ruta_Absoluta,"sqlite/")
 ruta_sqlite_construccion = os.path.join(ruta_Absoluta,"sqlite/build/")
 
