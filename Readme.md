@@ -4,12 +4,16 @@
 ## Sistemas Operativos Soportados:
 
 *   Linux(ubuntu)
+*   Windows(32 bits)
 
 ## Dependencias
 
 ### Linux(Ubuntu):
  * sudo apt-get install -y libsqlite3-dev
  * Latino
+
+
+
 
 # ¿Como instalarlo?
 Antes de ejecutar lo siguien, verifique que cuente con la depencias necesarias.
@@ -18,6 +22,20 @@ Antes de ejecutar lo siguien, verifique que cuente con la depencias necesarias.
 ```
 sudo ./instalar.sh
 ```
+
+### Windows:
+ * Descargar la libreria del siguiente enlace:
+ https://github.com/Jonathan-Lara-Hurtado/latino-sqlite3/releases/download/1/latino_sqlite_x86.zip
+ * Descomprimir el archivo
+ * Copiar los siguientes archivos en el directorio donde se encuentra instalado latino en mi caso “C:\Program Files\Latino\bin”:
+    *   “latino-sqlite.dll”
+    *   “latino-sqlite.exp”
+    *   “latino-sqlite.lib”
+ * Pruebe la librería usando algun ejemplo que se encuentra en el repositorio de sqlite-latino:
+ https://github.com/Jonathan-Lara-Hurtado/latino-sqlite3/blob/master/ejemplos/
+
+
+
 
 # Funciones
 * Retorna un conector o nulo = conexion_bd(cadena);
