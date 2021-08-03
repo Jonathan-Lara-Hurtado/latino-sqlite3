@@ -1,0 +1,55 @@
+incluir("sqlite")
+
+#ejemplo de tablas https://www.sqlite.org/foreignkeys.html#fk_basics
+
+bd = sqlite.conexion_bd("Prueba.db")
+
+si (bd != nulo)
+    #Activamos el soporte de foreign keys referencias https://www.sqlite.org/foreignkeys.html#fk_enable
+    resultado = sqlite.ejecutar_consulta(bd,' PRAGMA foreign_keys = ON')
+
+    #creamos tabla artista
+    consultaTablaArtista = "create table artista(artistaId integer primary key,artistaNombre text)"
+    resultado = sqlite.ejecutar_consulta(bd,consultaTablaArtista)
+
+
+    #creamos la tabla cancion
+    consultaTablaCancion = "create table cancion(cancionId integer primary key, cancionNombre text,cancionArtista integer, 
+                            FOREIGN KEY(cancionArtista) REFERENCES artista(artistaId))"
+    resultado = sqlite.ejecutar_consulta(bd,consultaTablaCancion)
+    escribir("Tabla cancion:"..resultado)
+
+
+    #inserciónes tabla artista
+    consulta = "insert into artista(artistaId,artistaNombre) values 
+                (1,'pedro'),
+                (2,'juan'),
+                (3,'xavi'),
+                (4,'ana')"
+    resultado = sqlite.ejecutar_consulta(bd,consulta)
+    
+
+    #inserción 1 tabla cancion
+    consulta = "insert into cancion(cancionId,cancionNombre,cancionArtista) values (1,'respaldo',1)"
+    resultado = sqlite.ejecutar_consulta(bd,consulta)
+    escribir(resultado)
+
+    #inserción 2 tabla cancion falla no existe artista
+    consulta = "insert into cancion(cancionId,cancionNombre,cancionArtista) values (2,'queso',10)"
+    resultado = sqlite.ejecutar_consulta(bd,consulta)
+    escribir(resultado)
+
+    #inserción 3 tabla cancion
+    consulta = "insert into cancion(cancionId,cancionNombre,cancionArtista) values (3,'agua azul',2)"
+    resultado = sqlite.ejecutar_consulta(bd,consulta)
+    escribir(resultado)
+
+
+
+    si (sqlite.desconectar_bd(bd))
+        escribir ("Se cerro la base de datos correctamente")
+    fin
+
+sino
+    escribir ("Conexión fallida")
+fin
