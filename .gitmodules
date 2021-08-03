@@ -1,0 +1,3 @@
+[submodule "latino-regex"]
+	path = latino-regex
+	url = https://github.com/lenguaje-latino/latino-regex/tree/0583e5e55e4abd651af0fcfa3de91d16d721f37c/src
